@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0047)file:///C:/Users/elbul/Downloads/privacy_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — ClipFlow</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./privacy_files/css2" rel="stylesheet">
     <style>
         :root {
             --black: #0a0a0a;
@@ -17,42 +17,20 @@
             --text-secondary: #888888;
             --text: #e8e4dc;
             --accent: #e8c547;
-            --accent-dim: #c9a82c;
-            --red: #e84747;
-            --green: #47e88a;
-            --blue: #4799e8;
         }
 
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
             background: var(--black);
             color: var(--text);
             font-family: 'Syne', sans-serif;
-            overflow-x: hidden;
         }
 
-        /* Noise overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-            background-size: 200px 200px;
-            pointer-events: none;
-            z-index: 1000;
-            opacity: 0.4;
-        }
-
-        /* Nav */
         nav {
             position: fixed;
             top: 0;
@@ -63,14 +41,8 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 48px;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease, background 0.3s ease;
-            backdrop-filter: blur(0px);
-        }
-
-        nav.scrolled {
-            border-color: var(--border);
-            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 1px solid var(--border);
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
         }
 
@@ -86,30 +58,21 @@
             color: var(--accent);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 36px;
-            list-style: none;
-        }
-
-        .nav-links a {
+        .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 13px;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
             transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
+        .nav-link:hover {
             color: var(--text);
         }
 
-        /* Legal page */
         .legal-page {
             padding: 140px 48px 80px;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -125,11 +88,6 @@
             font-size: 12px;
             color: var(--text-secondary);
             margin-bottom: 48px;
-            display: inline-block;
-            padding: 8px 16px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 4px;
         }
 
         .legal-page h2 {
@@ -138,13 +96,6 @@
             margin-top: 40px;
             margin-bottom: 16px;
             color: var(--text);
-            letter-spacing: -0.5px;
-        }
-
-        .legal-page h2::before {
-            content: '§ ';
-            color: var(--accent);
-            margin-right: 8px;
         }
 
         .legal-page p {
@@ -157,7 +108,6 @@
         .legal-page ul {
             list-style: none;
             margin-bottom: 16px;
-            padding-left: 20px;
         }
 
         .legal-page ul li {
@@ -166,7 +116,6 @@
             line-height: 1.8;
             padding-left: 20px;
             position: relative;
-            margin-bottom: 8px;
         }
 
         .legal-page ul li::before {
@@ -174,93 +123,16 @@
             position: absolute;
             left: 0;
             color: var(--accent);
-            font-weight: 700;
         }
 
-        .toc {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 28px;
-            margin: 48px 0;
-        }
-
-        .toc-title {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent);
-            margin-bottom: 16px;
-        }
-
-        .toc-list {
-            list-style: none;
-        }
-
-        .toc-list li {
-            margin-bottom: 8px;
-        }
-
-        .toc-list a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-
-        .toc-list a:hover {
-            color: var(--text);
-        }
-
-        .highlight {
-            background: rgba(232, 197, 71, 0.1);
-            border-left: 3px solid var(--accent);
-            padding: 16px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-
-        .highlight p {
-            margin: 0;
-        }
-
-        .privacy-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 24px 0;
-        }
-
-        .privacy-table th,
-        .privacy-table td {
-            border: 1px solid var(--border);
-            padding: 12px;
-            text-align: left;
-            font-size: 14px;
-        }
-
-        .privacy-table th {
-            background: var(--surface);
-            color: var(--text);
-            font-weight: 700;
-        }
-
-        .privacy-table tr:hover {
-            background: var(--surface);
-        }
-
-        .privacy-table td {
-            color: var(--text-secondary);
-        }
-
-        /* Footer */
         footer {
             padding: 48px;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .footer-logo {
@@ -292,238 +164,81 @@
             color: var(--text);
         }
 
-        .footer-copy {
-            font-size: 12px;
-            color: var(--muted);
-            font-family: 'DM Mono', monospace;
-        }
-
         @media (max-width: 768px) {
-            nav { padding: 20px 24px; }
-            .nav-links { display: none; }
-            .legal-page { padding: 120px 24px 60px; }
-            footer { flex-direction: column; gap: 24px; text-align: center; }
+            nav {
+                padding: 20px 24px;
+            }
+            .legal-page {
+                padding: 120px 24px 60px;
+            }
+            footer {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav id="nav">
-        <a href="/" class="logo">Clip<span>Flow</span></a>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/terms.html">Terms of Service</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-        </ul>
+    <nav>
+        <a href="file:///C:/Users/elbul/Downloads/index.html" class="logo">Clip<span>Flow</span></a>
+        <a href="file:///C:/Users/elbul/Downloads/index.html" class="nav-link">← Back to Home</a>
     </nav>
 
-    <!-- Privacy Content -->
     <div class="legal-page">
         <h1>Privacy Policy</h1>
-        <div class="updated">Effective: April 24, 2026</div>
+        <div class="updated">Last updated: April 24, 2026</div>
 
-        <div class="toc">
-            <div class="toc-title">Table of Contents</div>
-            <ul class="toc-list">
-                <li><a href="#overview">1. Overview</a></li>
-                <li><a href="#what-we-do-not-collect">2. What We Do Not Collect</a></li>
-                <li><a href="#local-processing">3. Local Processing & Transcription</a></li>
-                <li><a href="#credentials">4. API Credentials & Security</a></li>
-                <li><a href="#platform-apis">5. Platform API Communications</a></li>
-                <li><a href="#logs">6. Log Files & Monitoring</a></li>
-                <li><a href="#email">7. Email & Notifications</a></li>
-                <li><a href="#retention">8. Data Retention</a></li>
-                <li><a href="#security">9. Security Measures</a></li>
-                <li><a href="#contact">10. Contact & Privacy Rights</a></li>
-            </ul>
-        </div>
+        <h2>1. Overview</h2>
+        <p>ClipFlow is designed with privacy at its core. This policy explains how data is handled when you use the Tool. The short version: your content stays on your machine.</p>
 
-        <h2 id="overview">Overview</h2>
-        <p>ClipFlow is built with privacy as a foundational principle. This Privacy Policy explains exactly how data is handled when you use ClipFlow.</p>
-        <p><strong>The core principle:</strong> Your content stays on your machine. We do not collect, store, or transmit your videos, audio, transcripts, or personal data to ClipFlow servers.</p>
-
-        <h2 id="what-we-do-not-collect">What We Do Not Collect</h2>
-        <p>ClipFlow explicitly does NOT collect, store, or have access to:</p>
+        <h2>2. Data We Do Not Collect</h2>
+        <p>ClipFlow does not collect, store, or transmit:</p>
         <ul>
-            <li>Your video files or audio content</li>
-            <li>Your video transcripts (they stay on your machine)</li>
-            <li>Your clip metadata or video editing configurations</li>
+            <li>Your video or audio content</li>
+            <li>Your transcripts or clip metadata</li>
             <li>Your API credentials or access tokens</li>
-            <li>Usage patterns, analytics, or telemetry data</li>
-            <li>Engagement metrics or performance data about your content</li>
-            <li>Information about your audience or viewers</li>
-            <li>Personal information beyond what you voluntarily provide</li>
+            <li>Your usage patterns, analytics, or telemetry</li>
+            <li>Any personal information about your audience</li>
         </ul>
 
-        <div class="highlight">
-            <p><strong>No Tracking:</strong> We do not use cookies, pixels, analytics tracking, or any other technology to monitor your use of the Tool. ClipFlow does not know how often you run the automation, what keywords you use, or how many clips you create.</p>
-        </div>
+        <h2>3. Local Processing</h2>
+        <p>All video transcription is performed entirely on your local machine using OpenAI Whisper, an open-source model. No audio or video data is sent to any external server for transcription. Processing happens 100% offline after initial model download.</p>
 
-        <h2 id="local-processing">Local Processing & Transcription</h2>
-        <p><strong>Whisper Transcription (100% Local):</strong></p>
-        <p>All video transcription is performed entirely on your local machine using OpenAI's open-source Whisper model. This means:</p>
-        <ul>
-            <li>Your video audio NEVER leaves your computer</li>
-            <li>Transcripts are generated locally and stored on your machine only</li>
-            <li>No cloud transcription service has access to your content</li>
-            <li>Processing happens offline (after initial model download)</li>
-            <li>You maintain 100% privacy over transcript content</li>
-        </ul>
-        <p><strong>Processing Details:</strong> When you run ClipFlow, it:</p>
-        <ul>
-            <li>Downloads the Whisper model to your machine (one-time, ~74MB for "base" model)</li>
-            <li>Processes your video locally using that model</li>
-            <li>Generates transcript files and stores them in your local directory</li>
-            <li>Never connects to external transcription APIs or services</li>
-        </ul>
+        <h2>4. API Credentials</h2>
+        <p>Your TikTok, Instagram, YouTube, and Twitter/X credentials are stored locally in environment variables on your machine. They are never transmitted to ClipFlow or any third party. You are solely responsible for keeping these credentials secure.</p>
 
-        <h2 id="credentials">API Credentials & Security</h2>
-        <p><strong>Credential Storage:</strong> Your API credentials for TikTok, Instagram, YouTube, and Twitter/X are stored in a local `.env` file on your machine. They are:</p>
-        <ul>
-            <li>Stored locally on your computer only</li>
-            <li>Never transmitted to ClipFlow servers</li>
-            <li>Never logged or printed in debug output</li>
-            <li>Protected by your machine's file permissions</li>
-            <li>Your sole responsibility to keep secure</li>
-        </ul>
-        <p><strong>How Credentials Are Used:</strong> When ClipFlow runs, credentials are used to:</p>
-        <ul>
-            <li>Authenticate directly with official platform APIs</li>
-            <li>Download your TikTok livestreams (TikTok API)</li>
-            <li>Upload clips to connected platforms (official APIs)</li>
-            <li>Retrieve platform metadata (video titles, descriptions, etc.)</li>
-        </ul>
-        <p>All API communication uses official OAuth 2.0 authentication and goes directly between your machine and each platform. ClipFlow does not act as a proxy or intermediary.</p>
+        <h2>5. Platform APIs</h2>
+        <p>When the Tool uploads clips to social media platforms, it communicates directly with those platforms' official APIs. This data transfer is governed by each platform's own privacy policy.</p>
 
-        <h2 id="platform-apis">Platform API Communications</h2>
-        <p>When ClipFlow uploads clips to your social media accounts, it communicates directly with official platform APIs. These communications are governed by each platform's own privacy policy:</p>
-        <table class="privacy-table">
-            <tr>
-                <th>Platform</th>
-                <th>Data Shared</th>
-                <th>Privacy Policy</th>
-            </tr>
-            <tr>
-                <td>TikTok</td>
-                <td>Video files, captions, hashtags</td>
-                <td><a href="https://www.tiktok.com/legal/privacy-policy" target="_blank">TikTok Privacy Policy</a></td>
-            </tr>
-            <tr>
-                <td>Meta (Instagram)</td>
-                <td>Video files, captions, hashtags</td>
-                <td><a href="https://www.facebook.com/privacy/policy" target="_blank">Meta Privacy Policy</a></td>
-            </tr>
-            <tr>
-                <td>YouTube</td>
-                <td>Video files, titles, descriptions</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-            </tr>
-            <tr>
-                <td>Twitter/X</td>
-                <td>Video files, text, links</td>
-                <td><a href="https://twitter.com/en/privacy" target="_blank">Twitter/X Privacy Policy</a></td>
-            </tr>
-        </table>
-        <p><strong>Important:</strong> ClipFlow does not have access to data about how platforms use the clips you upload. Each platform has its own data collection practices, which are outside ClipFlow's control.</p>
+        <h2>6. Log Files</h2>
+        <p>The Tool generates local log files on your machine recording run times, clip counts, upload status, and errors. These logs are stored only on your computer and are never transmitted externally. You may delete them at any time.</p>
 
-        <h2 id="logs">Log Files & Monitoring</h2>
-        <p>ClipFlow generates local log files each time it runs. These logs contain:</p>
-        <ul>
-            <li>Timestamp of execution</li>
-            <li>Number of videos downloaded</li>
-            <li>Number of clips created</li>
-            <li>Upload status for each platform</li>
-            <li>Errors encountered (if any)</li>
-            <li>Total execution time</li>
-        </ul>
-        <p><strong>Log Storage:</strong> All logs are stored locally on your machine in the `~/content-automation/logs/` directory. They are:</p>
-        <ul>
-            <li>Stored only on your computer</li>
-            <li>Not transmitted to ClipFlow or any external service</li>
-            <li>In your control — you can delete them anytime</li>
-            <li>Formatted as JSON for easy parsing and monitoring</li>
-        </ul>
+        <h2>7. Email Alerts</h2>
+        <p>If you configure email alerts, your email address is stored in your local environment file. Summary emails are sent directly from your configured email provider using SMTP. ClipFlow does not store or process your email address.</p>
 
-        <h2 id="email">Email & Notifications</h2>
-        <p>If you configure email notifications, ClipFlow can send you:</p>
-        <ul>
-            <li>Weekly summary reports (clips created, upload status)</li>
-            <li>Error alerts (if something fails during automation)</li>
-        </ul>
-        <p><strong>Email Handling:</strong></p>
-        <ul>
-            <li>Your email address is stored in your local `.env` file only</li>
-            <li>ClipFlow does not store your email on any server</li>
-            <li>Emails are sent directly from your configured SMTP provider (your ISP, Gmail, etc.)</li>
-            <li>ClipFlow does not log or retain email addresses</li>
-            <li>You can disable email notifications by removing the email from your `.env` file</li>
-        </ul>
+        <h2>8. Data Retention</h2>
+        <p>Raw video files are automatically deleted from your machine after processing. Transcript files and clip metadata are retained locally for your reference. You control all data on your own machine and may delete any files at any time.</p>
 
-        <h2 id="retention">Data Retention</h2>
-        <p><strong>Raw Video Files:</strong> Automatically deleted from your machine after clips are created. This saves disk space while preserving your transcripts and clips for reference.</p>
-        <p><strong>Transcript Files:</strong> Retained locally for your reference, analysis, and as a record of transcribed content. You control whether to keep or delete these.</p>
-        <p><strong>Clip Files:</strong> Retained locally after being uploaded. You can delete them to save space, or keep them as a backup.</p>
-        <p><strong>Configuration Files:</strong> Your `.env` and keyword configuration files are stored locally and are your responsibility to keep or delete.</p>
-        <p><strong>Log Files:</strong> Retained indefinitely in your logs directory. You can delete them anytime.</p>
+        <h2>9. Children's Privacy</h2>
+        <p>ClipFlow is intended for use by content creators and is not directed at children under 13. We do not knowingly collect information from children.</p>
 
-        <h2 id="security">Security Measures</h2>
-        <p><strong>What ClipFlow Does:</strong></p>
-        <ul>
-            <li>Uses official OAuth 2.0 authentication for all platform APIs</li>
-            <li>Requires explicit credential storage in your local environment file</li>
-            <li>Never prints credentials or tokens to logs or output</li>
-            <li>Never transmits your data to external servers</li>
-            <li>Uses HTTPS for all API communications</li>
-        </ul>
-        <p><strong>What You Should Do:</strong></p>
-        <ul>
-            <li>Keep your `.env` file secure and never commit it to public repositories</li>
-            <li>Use strong, unique API credentials from each platform</li>
-            <li>Rotate API credentials periodically (recommended annually)</li>
-            <li>Do not share your configuration files or credentials with others</li>
-            <li>Monitor your platform accounts for unauthorized activity</li>
-        </ul>
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Continued use of the Tool after changes constitutes acceptance of the updated policy.</p>
 
-        <h2 id="contact">Contact & Privacy Rights</h2>
-        <p>Since ClipFlow does not collect personal data and processes everything locally on your machine, traditional data subject rights (GDPR, CCPA, etc.) have limited applicability. However:</p>
-        <p><strong>Your Control:</strong> You have complete control over all data on your machine. You can:</p>
-        <ul>
-            <li>Delete all configuration files, logs, and clips anytime</li>
-            <li>Stop using ClipFlow at any time with no data retention</li>
-            <li>Opt-out of email notifications by removing your email from `.env`</li>
-            <li>Disconnect from any platform API by removing credentials</li>
-        </ul>
-        <p><strong>Privacy Questions:</strong> For questions or concerns about this Privacy Policy, please contact us through:</p>
-        <ul>
-            <li>Your TikTok profile (if registered with us)</li>
-            <li>GitHub repository issues or discussions</li>
-        </ul>
-
-        <div class="highlight">
-            <p><strong>Policy Updates:</strong> We may update this Privacy Policy from time to time. Continued use of ClipFlow after updates constitutes acceptance of the new policy. We recommend reviewing this policy periodically.</p>
-        </div>
-
+        <h2>11. Contact</h2>
+        <p>For privacy-related questions, contact us through our TikTok profile or GitHub repository.</p>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-logo">Clip<span>Flow</span></div>
         <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/terms.html">Terms of Service</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="file:///C:/Users/elbul/Downloads/index.html">Home</a></li>
+            <li><a href="file:///C:/Users/elbul/Downloads/terms.html">Terms of Service</a></li>
         </ul>
-        <div class="footer-copy">© 2026 ClipFlow. All rights reserved.</div>
     </footer>
 
-    <script>
-        // Nav scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 40);
-        });
-    </script>
 
-</body>
-</html>
+
+</body></html>

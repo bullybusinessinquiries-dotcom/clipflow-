@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0045)file:///C:/Users/elbul/Downloads/terms_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — ClipFlow</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./terms_files/css2" rel="stylesheet">
     <style>
         :root {
             --black: #0a0a0a;
@@ -17,42 +17,20 @@
             --text-secondary: #888888;
             --text: #e8e4dc;
             --accent: #e8c547;
-            --accent-dim: #c9a82c;
-            --red: #e84747;
-            --green: #47e88a;
-            --blue: #4799e8;
         }
 
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
             background: var(--black);
             color: var(--text);
             font-family: 'Syne', sans-serif;
-            overflow-x: hidden;
         }
 
-        /* Noise overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-            background-size: 200px 200px;
-            pointer-events: none;
-            z-index: 1000;
-            opacity: 0.4;
-        }
-
-        /* Nav */
         nav {
             position: fixed;
             top: 0;
@@ -63,14 +41,8 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 48px;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease, background 0.3s ease;
-            backdrop-filter: blur(0px);
-        }
-
-        nav.scrolled {
-            border-color: var(--border);
-            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 1px solid var(--border);
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
         }
 
@@ -86,30 +58,21 @@
             color: var(--accent);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 36px;
-            list-style: none;
-        }
-
-        .nav-links a {
+        .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 13px;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
             transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
+        .nav-link:hover {
             color: var(--text);
         }
 
-        /* Legal page */
         .legal-page {
             padding: 140px 48px 80px;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -125,11 +88,6 @@
             font-size: 12px;
             color: var(--text-secondary);
             margin-bottom: 48px;
-            display: inline-block;
-            padding: 8px 16px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 4px;
         }
 
         .legal-page h2 {
@@ -138,13 +96,6 @@
             margin-top: 40px;
             margin-bottom: 16px;
             color: var(--text);
-            letter-spacing: -0.5px;
-        }
-
-        .legal-page h2::before {
-            content: '§ ';
-            color: var(--accent);
-            margin-right: 8px;
         }
 
         .legal-page p {
@@ -157,7 +108,6 @@
         .legal-page ul {
             list-style: none;
             margin-bottom: 16px;
-            padding-left: 20px;
         }
 
         .legal-page ul li {
@@ -166,7 +116,6 @@
             line-height: 1.8;
             padding-left: 20px;
             position: relative;
-            margin-bottom: 8px;
         }
 
         .legal-page ul li::before {
@@ -174,65 +123,16 @@
             position: absolute;
             left: 0;
             color: var(--accent);
-            font-weight: 700;
         }
 
-        .toc {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 28px;
-            margin: 48px 0;
-        }
-
-        .toc-title {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent);
-            margin-bottom: 16px;
-        }
-
-        .toc-list {
-            list-style: none;
-        }
-
-        .toc-list li {
-            margin-bottom: 8px;
-        }
-
-        .toc-list a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-
-        .toc-list a:hover {
-            color: var(--text);
-        }
-
-        .highlight {
-            background: rgba(232, 197, 71, 0.1);
-            border-left: 3px solid var(--accent);
-            padding: 16px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-
-        .highlight p {
-            margin: 0;
-        }
-
-        /* Footer */
         footer {
             padding: 48px;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .footer-logo {
@@ -264,183 +164,85 @@
             color: var(--text);
         }
 
-        .footer-copy {
-            font-size: 12px;
-            color: var(--muted);
-            font-family: 'DM Mono', monospace;
-        }
-
         @media (max-width: 768px) {
-            nav { padding: 20px 24px; }
-            .nav-links { display: none; }
-            .legal-page { padding: 120px 24px 60px; }
-            footer { flex-direction: column; gap: 24px; text-align: center; }
+            nav {
+                padding: 20px 24px;
+            }
+            .legal-page {
+                padding: 120px 24px 60px;
+            }
+            footer {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav id="nav">
-        <a href="/" class="logo">Clip<span>Flow</span></a>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/terms.html">Terms of Service</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-        </ul>
+    <nav>
+        <a href="file:///C:/Users/elbul/Downloads/index.html" class="logo">Clip<span>Flow</span></a>
+        <a href="file:///C:/Users/elbul/Downloads/index.html" class="nav-link">← Back to Home</a>
     </nav>
 
-    <!-- Terms Content -->
     <div class="legal-page">
         <h1>Terms of Service</h1>
-        <div class="updated">Effective: April 24, 2026</div>
+        <div class="updated">Last updated: April 24, 2026</div>
 
-        <div class="toc">
-            <div class="toc-title">Table of Contents</div>
-            <ul class="toc-list">
-                <li><a href="#acceptance">1. Acceptance of Terms</a></li>
-                <li><a href="#description">2. Description of Service</a></li>
-                <li><a href="#responsibilities">3. User Responsibilities</a></li>
-                <li><a href="#api-usage">4. API Usage & Compliance</a></li>
-                <li><a href="#intellectual-property">5. Intellectual Property</a></li>
-                <li><a href="#privacy">6. Privacy & Data</a></li>
-                <li><a href="#disclaimers">7. Disclaimers & Warranties</a></li>
-                <li><a href="#liability">8. Limitation of Liability</a></li>
-                <li><a href="#changes">9. Changes to Terms</a></li>
-                <li><a href="#contact">10. Contact</a></li>
-            </ul>
-        </div>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By using ClipFlow ("the Tool"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Tool.</p>
 
-        <h2 id="acceptance">Acceptance of Terms</h2>
-        <p>By accessing, downloading, or using ClipFlow ("the Tool"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to any part of these terms, do not use the Tool.</p>
-
-        <h2 id="description">Description of Service</h2>
-        <p>ClipFlow is an automation tool designed for content creators that provides the following services:</p>
+        <h2>2. Description of Service</h2>
+        <p>ClipFlow is an automation tool that:</p>
         <ul>
             <li>Downloads TikTok livestream videos via the official TikTok API</li>
-            <li>Transcribes video content using locally-run AI models (OpenAI Whisper)</li>
-            <li>Analyzes transcripts to identify high-engagement moments using custom keywords</li>
-            <li>Creates short-form video clips (15-30 seconds) from identified segments</li>
-            <li>Distributes clips to multiple social media platforms (TikTok, Instagram Reels, YouTube Shorts, Twitter/X)</li>
-            <li>Generates logs and performance metrics for processed content</li>
+            <li>Transcribes video content using locally-run AI models</li>
+            <li>Creates short-form clips from identified high-engagement moments</li>
+            <li>Distributes clips to connected social media platforms</li>
         </ul>
 
-        <h2 id="responsibilities">User Responsibilities</h2>
-        <p>You agree that you are solely responsible for:</p>
+        <h2>3. User Responsibilities</h2>
+        <p>You are responsible for:</p>
         <ul>
-            <li>Maintaining the security and confidentiality of your API credentials</li>
-            <li>Ensuring you have legal rights to all content processed through the Tool</li>
-            <li>Complying with TikTok's Terms of Service and Developer Agreement & Policy</li>
-            <li>Complying with the terms of service of all distribution platforms (Instagram, YouTube, Twitter/X)</li>
-            <li>Keeping your environment configuration files and credentials secure</li>
-            <li>All content you publish through the Tool's automated distribution</li>
-            <li>Monitoring your API usage and staying within platform rate limits</li>
-            <li>Reviewing and accepting the privacy policies of all connected platforms</li>
+            <li>Maintaining valid API credentials for all connected platforms</li>
+            <li>Ensuring you have rights to all content processed through the Tool</li>
+            <li>Complying with TikTok's Terms of Service and Developer Agreement</li>
+            <li>Complying with the terms of service of all distribution platforms</li>
+            <li>Keeping your credentials and configuration files secure</li>
+            <li>The content you publish through automated distribution</li>
         </ul>
 
-        <div class="highlight">
-            <p><strong>Important:</strong> You are responsible for the content you create and distribute. ClipFlow does not review, filter, or approve content before posting. Ensure all clips comply with platform policies and applicable laws.</p>
-        </div>
+        <h2>4. API Usage</h2>
+        <p>This Tool uses the TikTok for Developers API under the Content Posting API and User Video API products. All usage must comply with TikTok's Developer Terms of Service and applicable rate limits. You are responsible for maintaining your own API credentials and ensuring your usage remains within permitted limits.</p>
 
-        <h2 id="api-usage">API Usage & Compliance</h2>
-        <p>This Tool uses the following official APIs:</p>
-        <ul>
-            <li><strong>TikTok for Developers API:</strong> User Video API and Content Posting API</li>
-            <li><strong>Instagram Graph API:</strong> For Instagram Reels distribution</li>
-            <li><strong>YouTube Data API v3:</strong> For YouTube Shorts distribution</li>
-            <li><strong>Twitter/X API v2:</strong> For Twitter/X distribution</li>
-        </ul>
-        <p>All API usage must comply with each platform's Developer Terms of Service, rate limits, and usage policies. You are responsible for:</p>
-        <ul>
-            <li>Obtaining and maintaining valid API credentials</li>
-            <li>Not exceeding API rate limits or quota allocations</li>
-            <li>Not using APIs for unauthorized, illegal, or prohibited purposes</li>
-            <li>Immediately reporting any unauthorized access to your credentials</li>
-            <li>Complying with each platform's acceptable use policies</li>
-        </ul>
-        <p>ClipFlow is not responsible for API outages, changes, deprecations, or policy modifications made by any platform.</p>
+        <h2>5. Intellectual Property</h2>
+        <p>You retain all rights to your content. ClipFlow does not claim ownership of any content processed through the Tool. The Tool itself, including its code and documentation, is proprietary to ClipFlow.</p>
 
-        <h2 id="intellectual-property">Intellectual Property</h2>
-        <p><strong>Your Content:</strong> You retain all rights to content you create and process through the Tool. ClipFlow does not claim ownership of your videos, transcripts, clips, or any derivative content you produce.</p>
-        <p><strong>Tool IP:</strong> The ClipFlow software, code, documentation, design, and underlying technology are proprietary to ClipFlow. You are granted a personal, non-exclusive, non-transferable license to use the Tool as intended. You may not:</p>
-        <ul>
-            <li>Reverse-engineer, decompile, or attempt to derive source code</li>
-            <li>Sell, distribute, or commercially license the Tool</li>
-            <li>Modify the Tool for distribution or commercial purposes</li>
-            <li>Remove or alter copyright notices or licensing information</li>
-        </ul>
+        <h2>6. Privacy</h2>
+        <p>All video transcription is performed locally on your machine. No audio, video, or transcript data is transmitted to ClipFlow servers. See our Privacy Policy for full details.</p>
 
-        <h2 id="privacy">Privacy & Data</h2>
-        <p>ClipFlow is designed with privacy as a core principle. Please see our <a href="/privacy.html">Privacy Policy</a> for complete details on how data is handled. Key points:</p>
-        <ul>
-            <li>All video transcription is performed locally on your machine. No data is sent to external servers for transcription.</li>
-            <li>Your API credentials are stored in local environment variables, not transmitted to ClipFlow</li>
-            <li>Raw video files are automatically deleted after processing</li>
-            <li>ClipFlow does not collect, store, or transmit analytics about your usage</li>
-            <li>Log files are stored only on your machine and are not transmitted externally</li>
-        </ul>
+        <h2>7. Disclaimer of Warranties</h2>
+        <p>The Tool is provided "as is" without warranty of any kind. We do not guarantee uninterrupted operation, and we are not responsible for API downtime, rate limit changes, or platform policy changes that affect functionality.</p>
 
-        <h2 id="disclaimers">Disclaimers & Warranties</h2>
-        <p><strong>AS-IS BASIS:</strong> The Tool is provided "as is" and "as available" without any warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-        <p><strong>NO GUARANTEES:</strong> ClipFlow does not guarantee:</p>
-        <ul>
-            <li>Uninterrupted, error-free operation of the Tool</li>
-            <li>That the Tool will meet your specific requirements</li>
-            <li>That clips will receive engagement or achieve any particular performance</li>
-            <li>Availability of APIs or platform services (subject to each platform's own terms)</li>
-            <li>Accuracy of transcripts generated by Whisper</li>
-            <li>That identified moments are optimal or will generate engagement</li>
-        </ul>
-        <p><strong>PLATFORM CHANGES:</strong> We are not responsible for changes to platform APIs, policies, rate limits, or service availability. Each platform may modify or discontinue their services at any time, which may affect the Tool's functionality.</p>
+        <h2>8. Limitation of Liability</h2>
+        <p>ClipFlow shall not be liable for any indirect, incidental, or consequential damages arising from use of the Tool, including loss of content, account suspension, or missed upload windows.</p>
 
-        <h2 id="liability">Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, ClipFlow shall not be liable for any of the following, even if advised of the possibility of such damages:</p>
-        <ul>
-            <li>Indirect, incidental, special, consequential, or punitive damages</li>
-            <li>Loss of content, data, revenue, or business opportunities</li>
-            <li>Account suspension or termination by any social platform</li>
-            <li>Missed upload windows or scheduling failures</li>
-            <li>Third-party claims or platform policy violations</li>
-            <li>Transcription errors or inaccurate clip identification</li>
-            <li>API failures, rate limiting, or service interruptions</li>
-        </ul>
-        <p>Your sole remedy is to stop using the Tool. In no event shall ClipFlow's total liability exceed the amount you paid to use the Tool (if any).</p>
+        <h2>9. Changes to Terms</h2>
+        <p>We reserve the right to modify these terms at any time. Continued use of the Tool after changes constitutes acceptance of the new terms.</p>
 
-        <h2 id="changes">Changes to Terms</h2>
-        <p>ClipFlow reserves the right to modify these Terms of Service at any time. Changes are effective immediately upon posting. Your continued use of the Tool after any modifications constitutes acceptance of the updated terms. We recommend reviewing these terms periodically for updates.</p>
-
-        <h2 id="contact">Contact</h2>
-        <p>For questions, concerns, or inquiries regarding these Terms of Service, please contact us through:</p>
-        <ul>
-            <li>Your TikTok profile (if registered with us)</li>
-            <li>GitHub repository issues or discussions</li>
-            <li>Email inquiry to the registered account holder</li>
-        </ul>
-
-        <div class="highlight">
-            <p><strong>Governing Law:</strong> These Terms of Service are governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
-        </div>
-
+        <h2>10. Contact</h2>
+        <p>For questions about these terms, contact us through our TikTok profile or GitHub repository.</p>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-logo">Clip<span>Flow</span></div>
         <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/terms.html">Terms of Service</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="file:///C:/Users/elbul/Downloads/index.html">Home</a></li>
+            <li><a href="file:///C:/Users/elbul/Downloads/privacy.html">Privacy Policy</a></li>
         </ul>
-        <div class="footer-copy">© 2026 ClipFlow. All rights reserved.</div>
     </footer>
 
-    <script>
-        // Nav scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 40);
-        });
-    </script>
 
-</body>
-</html>
+
+</body></html>
